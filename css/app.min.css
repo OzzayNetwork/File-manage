@@ -16110,3 +16110,92 @@ padding:1.25rem 2.2rem;
     width: auto;
     float: right;
 }
+.folder-badge{
+    display: flex;
+    padding: 1.5rem;
+    background: #80808021;
+    border-radius: 3px;
+    border: 2px solid #ddd6;
+    /* justify-content: center; */
+    align-items: center;
+    height: 80px;
+    transition: 0.3s;
+    margin-bottom: 2rem;
+}
+.folder-badge img{
+    height: 55px;
+    margin-right: 1rem;
+}
+.folder-badge h7{
+    font-size: 15px;
+    color: #0866c3;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+}
+.folder-badge p{
+    color: #999;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0px;
+    padding: 0px;
+}
+.folder-badge i{
+    margin-right: 1rem;
+    font-size: xx-large;
+}
+.folder-badge:hover{
+    background-color: white;
+}
+.folder-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.file-container{
+    display: flex;
+    padding: 1rem;
+    background: #80808021;
+    border-radius: 3px;
+    border: 2px solid #ddd6;
+    justify-content: center;
+    align-items: center;
+    /* height: 80px; */
+    transition: 0.3s;
+    margin-bottom: 2rem;
+    flex-flow: column;
+    background: white;
+    height: 230px;
+    margin-bottom: 2rem;
+}
+.file-container img{
+    height: 82px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.file-container:hover, .file-container.selected{
+    border-color: #f67819;
+    background-color: rgb(246 118 21 / 0.05);
+}
+.chat .avatar-char{
+    margin-right: 1.5rem;
+}
+.chat .widget-profile__list{
+    color: #5E5E5E;
+
+}
+.chat .widget-profile__list .media-body small{
+    color: #5E5E5E;
+
+}
+.chat .avatar-char{
+    background-color: #ccc;
+
+}
+.widget-profile__list .media-body strong{
+    font-weight: bolder;
+}
+.chat .widget-profile__list .media:nth-child(odd) {
+    background-color: rgb(255 255 255 / 49%);
+}

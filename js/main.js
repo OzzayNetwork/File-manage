@@ -1602,6 +1602,10 @@ $('.submit-mpesa').on('click', function(){
 			
 	  });
 
+	  $('.file-container').on('click', function(){
+		  $(this).addClass('selected').parent().siblings().children('.file-container').removeClass('selected');
+	  })
+
 	  //fixing modal issue with bootstrap
 	//   $('#fg').on('show.bs.modal', function (e) {
 	// 	var taskFlatpickrConfig = {
