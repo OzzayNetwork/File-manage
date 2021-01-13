@@ -33,6 +33,10 @@
         <link rel="stylesheet" href="vendors/rateyo/jquery.rateyo.min.css">
         <link rel="stylesheet" href="vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
 
+        <!-- bootstrap select -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+
         <!-- App styles -->
 		<link rel="stylesheet" href="css/app.min.css">
 		<link rel="stylesheet" href="css/daterangepicker.css">
@@ -41,7 +45,7 @@
 
     <body data-ma-theme="green">
         <main class="main">
-           <div class="page-loader">
+            <div class="page-loader">
                 <div class="page-loader__spinner">
                     <svg viewBox="25 25 50 50">
                         <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
@@ -49,7 +53,7 @@
                     <img src="demo/img/gifs/preloader.gif">
                 </div>
 				<span class="powerd-container">
-					<strong>File Manager</strong>
+					<strong>File Manager By</strong>
 					<img src="demo/img/logo-files/nouveta-orange.svg">
 					
 				</span>
@@ -136,331 +140,332 @@
                             </ul>
                         </li>
         
-                    
                         <li class="navigation__active" title="Have a look at some reports"><a href="#"><i class="zmdi zmdi-power" ></i>Logout</a></li>
 						
                     </ul>
                 </div>
             </aside>
 
-            <!-- modals -->
-
-            <!-- Modal -->
-            <div class="modal fade" id="editDepartment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+             <!-- Modal -->
+             <div class="modal fade" id="leaveForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Edit Department</h5>
+                    <h5 class="modal-title" id="leaveFormTitle">Edit Department</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
+                        <form class="row" id="leaveAppForm">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label><strong>Change Department's Name</strong></label>
-                                    <input type="text" class="form-control departmentName" placeholder="Enter Department's name">
+                                    <label><strong>Date From</strong></label>
+                                    <input type="text" class="form-control date-picker" placeholder="Select date from" readonly>
                                 </div>
                             </div>
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label><strong>Change Department's Head</strong></label>
-                                    <input type="text" class="form-control departmentHead" placeholder="Enter department's head">
-                                    <small>Enter the employee's Number to continue</small>
+                                    <label><strong>Date To</strong></label>
+                                    <input type="text" class="form-control date-picker" placeholder="select date to" readonly>
                                 </div>
                             </div>
 
-                        </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label><strong>Leave Reason Type</strong></label>
+                                    <select class="selectpicker form-control" title="Choose leave type" data-live-search="true">
+                                        <option>Casual Leave</option>
+                                        <option>Medical Leave</option>
+                                        <option>Earned Leave</option>
+                                        <option>Maternity Leave</option>
+                                        <option>Paternity Leave</option>
+                                        <option>Leave Without Pay</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label><strong>Reason</strong></label>
+                                    <textarea class="form-control textarea-autosize text-counter" placeholder="Reason for giving leave ..." style="overflow: hidden; overflow-wrap: break-word; height: 51px;"></textarea>
+                                </div>
+                            </div>
+
+                        </form>
                     </div>
                     <div class="modal-footer bg-light py-4">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary" form="leaveAppForm">Submit</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="terminateLeave" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="leaveFormTitle">Terminate this leave</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row">
+                            <div class="col-12">
+                                <p>This leave was supposed to end on <strong>24 Nov 2020</strong> kindly key in the reason for terminating it before the due date.</p>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label><strong>Reason for terminating leave</strong></label>
+                                    <textarea class="form-control textarea-autosize text-counter" placeholder="Reason for giving leave ..." style="overflow: hidden; overflow-wrap: break-word; height: 51px;"></textarea>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer bg-light py-4">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" form="leaveAppForm">Terminate Leave</button>
                     </div>
                 </div>
                 </div>
             </div>
 			
-			<div class="content--full map-main-container d-none">
-					<div class="col-12">
-						<header class="content__title px-0 border-0">
-				 	<div class="row">
-						<div class="col-md-6 col-sm-12">
-							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Biller Dashboard</h1>
-							</span>
-							<div class="">
-								<ol class="breadcrumb border-0">
-									<li class="breadcrumb-item">Home</li>
-									<li class="breadcrumb-item active">Dashboard</li>
-								
-								</ol>
-								
-							</div>
-						</div>
-					</div>
-				</header>
-					</div>
-					<div class="pb-4">
-						<div class="col-12">
-							<h4 class="text-white text-light d-none">Revenue Collection By Subcounty</h4>
-							<div id="the-map-container">
-							</div>
-<!--							control buttons-->
-							<div class="row map-buttons d-flex">
-									<span class="map-date p-3 text-white ml-3">30 Jun 2020</span>
-								<div class="col">
-									<button id="today" disabled="true" class="active"><span></span>Today: 7,895,897</button>
-									 <button id="this-week"><span></span>This Week: 15,237,895,897</button>
-									 <button id="this-month"><span></span>June 2020: 21,237,895,897</button>
-									 <button id="financial-year"><span></span>FY 19/20: 452,237,895,897</button>
-								</div>
-							</div>
-<!--							control buttons-->
-						</div>
-					</div>
-			</div>
+		
 			<section class="content custom-table-container">
                 <header class="content__title px-0 border-0">
                     <div class="row">
                         <div class="col-md-8 col-sm-12">
                             <span class="rev-title-container">
-                                    <h1 class="text-capitalize stream_name m-0">Department</h1>
+                                    <h1 class="text-capitalize stream_name m-0">Service Provider Files</h1>
                                    </span>
                             <div class="">
                                 <ol class="breadcrumb border-0">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item active">Departments</li>
+                                    <li class="breadcrumb-item"><a href="index.html">Company</a></li>
+                                    <li class="breadcrumb-item active">Service Provider Files</li>
     
                                 </ol>
                             </div>
                         </div>
-                        <div class="col-4 col-sm-12 col-md-4">
+                        <div class="col-4 col-sm-12 col-md-4 d-none">
                             <div class="section-header">
-                                <a href="new-member.html" class="btn btn-sm btn-primary" title="">New Department</a>
+                                <a href="#" class="btn btn-sm btn-primary" title=""></a>
                             </div>
                         </div>
                     </div>
                 </header>
                 <div class="row">
-                    <div class="col-12 mb-3">
-                        <ul class="nav nav-pills navigated">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Departments</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Add A department</a>
-                            </li>                          
-
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row ">
-                    <div class="col-12 p-0 to-be-navigated">
-                        <div class="card table-custom-bg animated fade-in">
+                    <div class="col-12">                      
+                        
+                        <div class="card">
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-hover table-custom spacing8" id="data-table">
-                                        <thead>
+                                    <table class="table  table-sm table-striped" id="data-table">
+                                        <thead class="thead-dark text-white">
                                             <tr>
-                                                <th>#</th>
-                                                <th>Department Name</th>
-                                                <th>Department Head</th>
-                                                <th>Total Employees</th>
-                                                <th>Action</th>                                                
+                                                <th class="text-primary">Name</th>
+                                                <th class="text-primary"></th>
+                                                <th class="text-primary">Total Folders</th>
+                                                <th class="text-primary">Total Files</th> 
+                                                <th class="text-primary">Phone</th>
+                                                <th class="text-primary">Date Added</th>         
+                                                <th class="text-primary">Added By</th>                                               
+                                                <th class="text-primary">Actions</th>                                               
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td class="width45">
-                                                    1
+                                                    <div class="avtar-pic w35 bg-pink" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mary Njue">
+                                                        <span>MN</span>
+                                                    </div>
                                                 </td>
                                                 <td>
-                                                    Finance
+                                                    <h5 class="mb-0">Mary Njue</h5>
+                                                    <span>marynjue99@gmail.com</span>
+    
                                                 </td>
                                                 <td>
-                                                    Alex Wafula Mukoi
-                                                </td>
-                                                <td>
-                                                    23
-                                                </td>
-                                               
-                                                <td>
-                                                    <button class="btn btn-sm btn-danger btn--icon-text ml-2">
-                                                        <i class="zmdi zmdi-delete"></i> Delete
-                                                    </button>
-
-                                                    <button class="btn btn-sm btn-success btn--icon-text ml-2 editDepartment" data-toggle="modal" data-target="#editDepartment">
-                                                        <i class="zmdi zmdi-edit"></i> Edit
-                                                    </button>
-
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="width45">
                                                     2
                                                 </td>
                                                 <td>
-                                                    Marketing
+                                                   30
                                                 </td>
                                                 <td>
-                                                   Wafula Mtambuliki
+                                                    <a href="tel:0705256325">0705256325</a>
                                                 </td>
                                                 <td>
-                                                    23
+                                                    28 Jan, 2015 - 10:23 PM
                                                 </td>
-                                               
-                                               <td>
-                                                    <button class="btn btn-sm btn-danger btn--icon-text ml-2">
-                                                        <i class="zmdi zmdi-delete"></i> Delete
-                                                    </button>
-
-                                                    <button class="btn btn-sm btn-success btn--icon-text ml-2 editDepartment" data-toggle="modal" data-target="#editDepartment">
-                                                        <i class="zmdi zmdi-edit"></i> Edit
-                                                    </button>
-
+                                                <td>
+                                                    Mwongezaji Adda
+                                                </td>
+                                                <td>
+                                                    <a href="the-files.html" class="btn btn-sm btn-info btn--icon-text ml-2">
+                                                        <i class="zmdi zmdi-eye"></i> View
+                                                    </button>                                                   
+    
+    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="width45">
+                                                    <div class="avtar-pic w35 bg-pink" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mary Njue">
+                                                        <span>MN</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h5 class="mb-0">Mary Njue</h5>
+                                                    <span>marynjue99@gmail.com</span>
+    
+                                                </td>
+                                                <td>
+                                                    2
+                                                </td>
+                                                <td>
+                                                   30
+                                                </td>
+                                                <td>
+                                                    <a href="tel:0705256325">0705256325</a>
+                                                </td>
+                                                <td>
+                                                    28 Jan, 2015 - 10:23 PM
+                                                </td>
+                                                <td>
+                                                    Mwongezaji Adda
+                                                </td>
+                                                <td>
+                                                    <a href="the-files.html" class="btn btn-sm btn-info btn--icon-text ml-2">
+                                                        <i class="zmdi zmdi-eye"></i> View
+                                                    </button>                                                   
+    
+    
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td class="width45">
-                                                    3
+                                                    <div class="avtar-pic w35 bg-pink" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mary Njue">
+                                                        <span>MN</span>
+                                                    </div>
                                                 </td>
                                                 <td>
-                                                    Customer Service
+                                                    <h5 class="mb-0">Mary Njue</h5>
+                                                    <span>marynjue99@gmail.com</span>
+    
                                                 </td>
                                                 <td>
-                                                    Faith Kazuri
+                                                    2
                                                 </td>
                                                 <td>
-                                                    23
+                                                   30
                                                 </td>
-                                               
-                                               <td>
-                                                    <button class="btn btn-sm btn-danger btn--icon-text ml-2">
-                                                        <i class="zmdi zmdi-delete"></i> Delete
-                                                    </button>
-
-                                                    <button class="btn btn-sm btn-success btn--icon-text ml-2 editDepartment" data-toggle="modal" data-target="#editDepartment">
-                                                        <i class="zmdi zmdi-edit"></i> Edit
-                                                    </button>
-
+                                                <td>
+                                                    <a href="tel:0705256325">0705256325</a>
+                                                </td>
+                                                <td>
+                                                    28 Jan, 2015 - 10:23 PM
+                                                </td>
+                                                <td>
+                                                    Mwongezaji Adda
+                                                </td>
+                                                <td>
+                                                    <a href="the-files.html" class="btn btn-sm btn-info btn--icon-text ml-2">
+                                                        <i class="zmdi zmdi-eye"></i> View
+                                                    </button>                                                   
+    
+    
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td class="width45">
-                                                    4
+                                                    <div class="avtar-pic w35 bg-pink" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mary Njue">
+                                                        <span>MN</span>
+                                                    </div>
                                                 </td>
                                                 <td>
-                                                    Support
+                                                    <h5 class="mb-0">Mary Njue</h5>
+                                                    <span>marynjue99@gmail.com</span>
+    
                                                 </td>
                                                 <td>
-                                                    Sam Mlinzi
+                                                    2
                                                 </td>
                                                 <td>
-                                                    23
+                                                   30
                                                 </td>
-                                               
-                                               <td>
-                                                    <button class="btn btn-sm btn-danger btn--icon-text ml-2">
-                                                        <i class="zmdi zmdi-delete"></i> Delete
-                                                    </button>
-
-                                                    <button class="btn btn-sm btn-success btn--icon-text ml-2 editDepartment" data-toggle="modal" data-target="#editDepartment">
-                                                        <i class="zmdi zmdi-edit"></i> Edit
-                                                    </button>
-
+                                                <td>
+                                                    <a href="tel:0705256325">0705256325</a>
+                                                </td>
+                                                <td>
+                                                    28 Jan, 2015 - 10:23 PM
+                                                </td>
+                                                <td>
+                                                    Mwongezaji Adda
+                                                </td>
+                                                <td>
+                                                    <a href="the-files.html" class="btn btn-sm btn-info btn--icon-text ml-2">
+                                                        <i class="zmdi zmdi-eye"></i> View
+                                                    </button>                                                   
+    
+    
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td class="width45">
-                                                    5
+                                                    <div class="avtar-pic w35 bg-pink" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mary Njue">
+                                                        <span>MN</span>
+                                                    </div>
                                                 </td>
                                                 <td>
-                                                   Accounts
+                                                    <h5 class="mb-0">Mary Njue</h5>
+                                                    <span>marynjue99@gmail.com</span>
+    
                                                 </td>
                                                 <td>
-                                                   Tanakali John
+                                                    2
                                                 </td>
                                                 <td>
-                                                    23
+                                                   30
                                                 </td>
-                                               
-                                               <td>
-                                                    <button class="btn btn-sm btn-danger btn--icon-text ml-2">
-                                                        <i class="zmdi zmdi-delete"></i> Delete
-                                                    </button>
-
-                                                    <button class="btn btn-sm btn-success btn--icon-text ml-2 editDepartment" data-toggle="modal" data-target="#editDepartment">
-                                                        <i class="zmdi zmdi-edit"></i> Edit
-                                                    </button>
-
+                                                <td>
+                                                    <a href="tel:0705256325">0705256325</a>
+                                                </td>
+                                                <td>
+                                                    28 Jan, 2015 - 10:23 PM
+                                                </td>
+                                                <td>
+                                                    Mwongezaji Adda
+                                                </td>
+                                                <td>
+                                                    <a href="the-files.html" class="btn btn-sm btn-info btn--icon-text ml-2">
+                                                        <i class="zmdi zmdi-eye"></i> View
+                                                    </button>                                                   
+    
+    
                                                 </td>
                                             </tr>
+    
+                                           
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card animated fade-in d-none">
-                            <div class="card-header new-header">
-                                <div class="row align-items-center">
-                                    <div class="col">
-                                    <!-- Title -->
-                                    <h4 class="card-header-title py-2">
-                                      New Department
-                                    </h4>
-                                    </div>
-    
-                                </div> 
-                                <!-- / .row -->				
-                                </div>
-                                <div class="card-body ">
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-4 bg-light">
-                                           <div class="row">
-                                               <div class="col-12 padding-custom pt-4">
-                                                    <div class="form-group">
-                                                        <label><strong>Department Name</strong></label>
-                                                        <input type="text" class="form-control" placeholder="Enter Department name">
-                                                    </div>
 
-                                                    <div class="form-group mb-5">
-                                                        <label><strong>Department Head</strong></label>
-                                                        <input type="text" class="form-control" placeholder="Enter head'sEmp Num.">
-                                                        <small>Enter department's head Employee Number</small>
-                                                    </div>  
-                                                    
-                                                    <button class="btn btn-primary btn--icon-text mt-5">Add Department</button>
-                                                        
-                                                </div>
-
-                                                
-                                            </div>
-                                        
-
-                                       
-                                        </div>
-
-                                        <div class="col-sm-12 col-md-8">
-                                            <div class="row">
-                                               <div class="col-12 departmen-image">
-                                                   <img class="img" src="demo/img/form-svgs/department.svg">
-                                               </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                        </div>
                     </div>
                 </div>
+               
+
+                
 
 				
                 <footer class="footer hidden-xs-down">
@@ -572,7 +577,11 @@
 		<script src="https://code.highcharts.com/modules/drilldown.js"></script>
 		<script src="https://code.highcharts.com/modules/exporting.js"></script>
 		<script src="https://code.highcharts.com/modules/export-data.js"></script>
-		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        
+        <!-- bootstrap  select -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
 
 		<!--owl corousel-->
 		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
@@ -593,7 +602,11 @@
 	
 		<!--map scripts-->
 		
-		<script src="js/chart-data/map-data.js"></script>
+        <script src="js/chart-data/map-data.js"></script>
+        
+        <script>
+            $('select').selectpicker();
+        </script>
 		
        
 		

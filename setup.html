@@ -145,8 +145,15 @@
 
                         
 
-                        <li class="navigation__active" title="have a look at the departments" ><a href="candidates.html"><i class="pe-7s-id" ></i>Staff Members</a></li>
-                        <li class="navigation__active" title="have a look at the setup process" ><a href="setup.html"><i class="icon_cog" ></i>Set Up</a></li>
+                        <li class="navigation__sub">
+                            <a href="#"><i class="pe-7s-culture"></i>Staff Members <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+
+                            <ul>
+                                <li><a href="staff-client.html">Clients</a></li>
+                                <li><a href="service-provider-staff.html">Service Providers</a></li>
+                               
+                            </ul>
+                        </li>                          <li class="navigation__active" title="have a look at the setup process" ><a href="setup.html"><i class="icon_cog" ></i>Set Up</a></li>
 						<li class="navigation__active" title="Have a look at some reports"><a href="#"><i class="zmdi zmdi-power" ></i>Logout</a></li>
 						
                     </ul>
@@ -187,7 +194,7 @@
                                 <a class="nav-link" href="#">Personnel</a>
                             </li>                          
 
-                        </ul>
+                        </ul>   
                     </div>
                 </div>
 
@@ -205,111 +212,112 @@
                                   
                                 <div class="col-12">
                                     <div class="row ">
-                                      <div class="col-sm-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="exampleInputEmail1">Client's Name</label>
-                                          <input type="text" class="form-control form-control-lg" id="" aria-describedby="emailHelp" placeholder="Enter Client's Name">
-                                         
-                                        </div>
-                                      </div>
-                
-                                      <div class="col-sm-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="exampleInputEmail1">Short Name</label>
-                                          <input type="text" class="form-control form-control-lg" id="" aria-describedby="emailHelp" placeholder="Enter clients Short Name">
-                                         
-                                        </div>
-                                      </div>
-                
-                                      <div class="col-sm-12 col-md-12">
-                                        <div class="form-group">
-                                          <label for="exampleInputEmail1">Client's tag Line</label>
-                                          <input type="text" class="form-control form-control-lg" id="" aria-describedby="emailHelp" placeholder="Enter Client's tagline">
-                                         
-                                        </div>
-                                      </div>
-
-                                      <div class="col-12">
-                                        <hr>
-                                      </div>
-                
-                                      <div class="col-12 mb-2">
-                                        <h5>Contact Information</h5>
-                                        </div>
-
-                                      <div class="col-4 col-md-6 col-sm-12 col-lg-6">
-                                        <label>Company phone number</label>
-                                        <div class="input-group mb-3">
-                                          <input type="text" class="form-control" placeholder="Enter phone number" aria-label="Phone number" aria-describedby="basic-addon2">
-                                        </div>
-                                      </div>
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="checkbox pt-2 col-md-2 col-sm-12">
+                                                    <input type="radio" name="company_type_radio" id="comp_service_provider">
+                                                    <label class="checkbox__label" for="comp_service_provider">Service Provider</label>
+                                                </div>
                     
-                                      <div class="col-4 col-md-6 col-sm-12 col-lg-6">
-                                        <label>Company email address</label>
-                                        <div class="input-group mb-3">
-                                          <input type="emmmail" class="form-control" placeholder="Enter email address" aria-label="email" aria-describedby="basic-addon2">
-                                        </div>
-                                      </div>
+                                                <div class="checkbox col-md-2 col-sm-12">
+                                                    <input type="radio" name="company_type_radio" id="comp_client">
+                                                    <label class="checkbox__label" for="comp_client">Client</label>
+                                                </div>
+                    
+                                                <div class="checkbox col-md-2 col-sm-12">
+                                                    <input type="radio" name="company_type_radio" id="comp_staff">
+                                                    <label class="checkbox__label" for="comp_staff">Staff</label>
+                                                </div>
 
-                                                                          
-
-                
-                                      <div class="col-12">
-                                        <label>Postal address</label>
-                                        <div class="row">
-                                            
-                                            <div class="col-4 col-md-6 col-sm-12 col-lg-4">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control form-control-lg" id="" aria-describedby="emailHelp" placeholder="Enter postal code">
-                                            </div>
-                                            </div>
-                        
-                                            <div class="col-4 col-md-6 col-sm-12 col-lg-4">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control form-control-lg" id="" aria-describedby="emailHelp" placeholder="Enter Postal Town">
-                                            </div>
-                                            </div>
-                        
-                                            <div class="col-4 col-md-6 col-sm-12 col-lg-4">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control form-control-lg" id="" aria-describedby="emailHelp" placeholder="Enter the postal country">
-                                            </div>
                                             </div>
                                         </div>
-                
-                                      </div>
 
                                         <div class="col-12">
                                             <hr>
                                         </div>
 
-                                    <div class="col-12 mb-2">
-                                        <h5>Setup Type</h5>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="checkboxes-container row">
-                                            <div class="checkbox col-md-4 col-sm-12">
-                                                <input type="checkbox" class="all-checkboxes" id="customCheck1">
-                                                <label class="checkbox__label" for="customCheck1">Service Provider</label>
-                                            </div>
-                
-                                            <div class="checkbox col-md-4 col-sm-12">
-                                                <input type="checkbox" id="customCheck2">
-                                                <label class="checkbox__label" for="customCheck2">Client</label>
-                                            </div>
-                
-                                            <div class="checkbox col-md-4 col-sm-12">
-                                                <input type="checkbox" id="customCheck3">
-                                                <label class="checkbox__label" for="customCheck3">Staff</label>
-                                            </div>
-
+                                        <div class="col-12 mb-2">
+                                            <h5>Company Information</h5>
                                         </div>
-                                    </div>
 
-                                    <div class="col-12 mt-4">
-                                        <button class="btn btn-primary float-right">Submit<span class="ti-control-forward ml-2"></span></button>
-                                    </div>
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                            <label for="exampleInputEmail1">Client's Name</label>
+                                            <input type="text" class="form-control form-control-lg" id="" aria-describedby="emailHelp" placeholder="Enter Client's Name">
+                                            
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                            <label for="exampleInputEmail1">Short Name</label>
+                                            <input type="text" class="form-control form-control-lg" id="" aria-describedby="emailHelp" placeholder="Enter clients Short Name">
+                                            
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-sm-12 col-md-12">
+                                            <div class="form-group">
+                                            <label for="exampleInputEmail1">Client's tag Line</label>
+                                            <input type="text" class="form-control form-control-lg" id="" aria-describedby="emailHelp" placeholder="Enter Client's tagline">
+                                            
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <hr>
+                                        </div>
+                    
+                                        <div class="col-12 mb-2">
+                                            <h5>Contact Information</h5>
+                                            </div>
+
+                                        <div class="col-4 col-md-6 col-sm-12 col-lg-6">
+                                            <label>Company phone number</label>
+                                            <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Enter phone number" aria-label="Phone number" aria-describedby="basic-addon2">
+                                            </div>
+                                        </div>
+                        
+                                        <div class="col-4 col-md-6 col-sm-12 col-lg-6">
+                                            <label>Company email address</label>
+                                            <div class="input-group mb-3">
+                                            <input type="emmmail" class="form-control" placeholder="Enter email address" aria-label="email" aria-describedby="basic-addon2">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-12">
+                                            <label>Postal address</label>
+                                            <div class="row">
+                                                
+                                                <div class="col-4 col-md-6 col-sm-12 col-lg-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control form-control-lg" id="" aria-describedby="emailHelp" placeholder="Enter postal code">
+                                                </div>
+                                                </div>
+                            
+                                                <div class="col-4 col-md-6 col-sm-12 col-lg-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control form-control-lg" id="" aria-describedby="emailHelp" placeholder="Enter Postal Town">
+                                                </div>
+                                                </div>
+                            
+                                                <div class="col-4 col-md-6 col-sm-12 col-lg-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control form-control-lg" id="" aria-describedby="emailHelp" placeholder="Enter the postal country">
+                                                </div>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+
+                                        <div class="col-12 mt-4">
+                                            <button class="btn btn-primary float-right">Submit<span class="ti-control-forward ml-2"></span></button>
+                                        </div>
                   
                                   </div>
                                 </div>
@@ -328,6 +336,34 @@
                                       
                                       <div class="col-12">
                                         <div class="row ">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="checkbox pt-2 col-md-2 col-sm-12">
+                                                        <input type="radio" name="personnel_type_radio" id="pers_service_provider">
+                                                        <label class="checkbox__label" for="pers_service_provider">Service Provider</label>
+                                                    </div>
+                        
+                                                    <div class="checkbox col-md-2 col-sm-12">
+                                                        <input type="radio" name="personnel_type_radio" id="pers_client">
+                                                        <label class="checkbox__label" for="pers_client">Client</label>
+                                                    </div>
+                        
+                                                    <div class="checkbox col-md-2 col-sm-12">
+                                                        <input type="radio" name="personnel_type_radio" id="pers_staff">
+                                                        <label class="checkbox__label" for="pers_staff">Staff</label>
+                                                    </div>
+        
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+
+                                                                
+                                          <div class="col-12 mb-2">
+                                            <h5>Personnel Information</h5>
+                                            </div>
+
                                             <div class="col-4 col-md-6 col-sm-12 col-lg-4">
                                                 <div class="form-group">
                                                   <label for="ofiice-title" class="mb-0 pb-0">First Name</label>                      
@@ -373,7 +409,7 @@
                                                 </div>
                                               </div>
                             
-                                              <div class="col-4 col-md-6 col-sm-12 col-lg-4">
+                                              <div class="employee-id-input d-none col-4 col-md-6 col-sm-12 col-lg-4">
                                                 <label>Employee ID</label>
                                                 <div class="input-group mb-3">
                                                   <input type="text" class="form-control" placeholder="Enter employee ID" aria-label="email" aria-describedby="basic-addon2">
@@ -410,31 +446,7 @@
                                             <div class="col-12">
                                                 <hr>
                                             </div>
-    
-                                        <div class="col-12 mb-2">
-                                            <h5>Setup Type</h5>
-                                        </div>
-    
-                                        <div class="col-12">
-                                            <div class="checkboxes-container row">
-                                                <div class="checkbox col-md-4 col-sm-12">
-                                                    <input type="checkbox" class="all-checkboxes" id="customCheck1">
-                                                    <label class="checkbox__label" for="customCheck1">Service Provider</label>
-                                                </div>
-                    
-                                                <div class="checkbox col-md-4 col-sm-12">
-                                                    <input type="checkbox" id="customCheck2">
-                                                    <label class="checkbox__label" for="customCheck2">Client</label>
-                                                </div>
-                    
-                                                <div class="checkbox col-md-4 col-sm-12">
-                                                    <input type="checkbox" id="customCheck3">
-                                                    <label class="checkbox__label" for="customCheck3">Staff</label>
-                                                </div>
-    
-                                            </div>
-                                        </div>
-    
+        
                                         <div class="col-12 mt-4">
                                             <button class="btn btn-primary float-right">Submit<span class="ti-control-forward ml-2"></span></button>
                                         </div>

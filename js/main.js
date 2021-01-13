@@ -1564,7 +1564,13 @@ $('.submit-mpesa').on('click', function(){
 		}
 	});
 
-
+	$('#pers_staff').on('change', function(){
+		if($('#pers_staff').is(':checked')){
+			$('.employee-id-input').removeClass('d-none');
+		}else{
+			$('.employee-id-input').addClass('d-none');
+		}
+	});
 
 	function checkBoxUnselector(){
 		$('.checkboxes-container input').each(function(index,value){
