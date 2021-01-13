@@ -176,11 +176,16 @@
                       
                     </div>
 
-                    <button class="btn btn--icon-text btn-light"><i class="zmdi zmdi-mail-send"></i> Forward to email</button>
                 </div>
                 <button class="btn btn--icon-text btn-light"><i class="zmdi zmdi-mail-send"></i> Forward to email</button>
 
-                <a href="" title="view File" class="btn btn--action btn-primary"><i class="zmdi zmdi-eye"></i></a>
+
+                <div class="col-12">
+                    <a href="" href="#emailmodal" data-toggle="modal" data-target="#emailmodal" title="view File" class="btn btn--action btn-info" style="left: 30px;"><i class="zmdi zmdi-email"></i></a>
+
+                    <a href="" title="view File" class="btn btn--action btn-primary"><i class="zmdi zmdi-eye"></i></a>
+                </div>
+
             </aside>
             <!-- <file details goes here -->
 
@@ -400,6 +405,56 @@
                     </div>
                 </div>
                 </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="emailmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="leaveFormTitle">Send File Via Email</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form class="row">                            
+                        <div class="col-12 drop-file-container drop-bank-container animated mb-4 ">
+                            <div class="position-relative">
+                                <span  class="actions__item zmdi zmdi-close text-white float-right position-absolute close-droper" title="close form"></span>
+                                <div class="animated delete-row">                                        
+                                        <div class="row">  
+                                            <div class="col-12">
+                                                <div class="mb-4 email-modal">
+                                                    <label for="email_destination" class="">Email Address</label>                      
+                                                    <input type="text" class="form-control form-control-lg" id="email_destination" aria-describedby="emailHelp" placeholder="Email Address">
+                                                  </div>
+                                            </div>                                              
+                                            <div class="col-12">  
+                                                <label for="email_destination" class="">Email Content</label>                      
+                                                <a class="file-container"  data-ma-action="aside-open" data-ma-target=".chat" title="the file name especially those long file names oes here">
+ 
+                                                    <!-- show image according to file type -->
+                                                        <img src="demo/img/file-types/ppt.svg">
+                                                        <div class="text-center">
+                                                            <h7><strong>File Name</strong></h7>
+                                                            <p>12 MB</p>
+                                                        </div>
+                                                    </a>                                                
+                                            </div>
+                                        </div>                                        
+                                </div>
+                            </div>
+                        </div>                            
+
+                    </form>
+                </div>
+                <div class="modal-footer bg-light py-4">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Discard</button>
+                <button type="submit" class="btn btn-success btn--icon-text" form="leaveAppForm">Send<i class="zmdi zmdi-mail-send ml-2"></i></button>
+                </div>
+            </div>
+            </div>
             </div>
 			
 		
