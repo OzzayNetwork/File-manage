@@ -45,6 +45,34 @@ $(window).on('load', function(){
 		
 	});
 
+	$('body').on('click','.add_person', function(e){
+		e.preventDefault();
+		// $(this).addClass('d-none');
+		var the_form=$(this).parent().parent().parent().parent().parent();
+		var theIndex=the_form.index();
+		AddPerson(theIndex);
+		$(this).addClass('d-none');
+		$(this).parent().next().addClass('d-none');
+		//alert(theIndex);
+	});
+	
+	
+	
+	//Group Checkin duplicate form
+	function AddPerson(theIndex){
+		var cln = document.getElementById("group_form").cloneNode(true);
+		//$('.group_form').children('form').trigger("reset");
+		document.getElementsByClassName('group-checkin')[0].appendChild(cln);	
+		
+		var new_index = theIndex+1;
+		$(".group_form").eq(new_index).find('input:text, input:password, input:file, input, select, textarea').val('');
+		$(".group_form").eq(new_index).find('input:radio, input:checkbox').removeAttr('checked').removeAttr('selected');
+		$(".group_form").eq(new_index).find('.add_person').removeClass('d-none');
+		$(".group_form").eq(new_index).find('#bulk_child_check').attr("id","bulk_child_check"+new_index);
+		// alert(this.attr("id"));
+	
+	}
+
 	// editing departments
 	$('body').on('click','.editDepartment', function(){
 		var departmentName=$(this).parent().siblings().eq(1).text();
