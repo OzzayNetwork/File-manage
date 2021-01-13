@@ -10449,7 +10449,6 @@ opacity:1
 }
 .listview__img {
     height: 3rem;
-    border-radius: 50%;
     vertical-align: top;
     margin: 0 1.2rem 0 0
 }
@@ -16455,4 +16454,10 @@ padding:1.25rem 2.2rem;
 .email-modal input:hover{
     border-color: #f67819 !important;
     background-color: rgb(246 118 21 / 0.05) !important;
+}
+.listview__img {
+    height: 3.5rem;
+    vertical-align: top;
+    margin: 0 1.2rem 0 0;
+    border: 0px !important;
 }
