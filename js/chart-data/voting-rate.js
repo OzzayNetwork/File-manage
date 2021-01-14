@@ -63,7 +63,7 @@ Highcharts.chart('voting-rate', {
     },
     yAxis: {
         title: {
-            text: 'Votes Casted'
+            text: 'Outgoing Documents'
         },
         gridLineColor: '#95aac9',
         gridLineDashStyle: 'ShortDot',
@@ -72,7 +72,7 @@ Highcharts.chart('voting-rate', {
     },
     tooltip: {
         shared: true,
-        valueSuffix: ' Customers'
+        valueSuffix: ' Files'
     },
     credits: {
         enabled: false
@@ -88,9 +88,14 @@ Highcharts.chart('voting-rate', {
             }
         }
     },
-    series: [{
-    
-        name: 'Customers served',
-        data: [3, 4, 3, 5, 4, 102, 212,43,146,43,165,194,510,152,3,154,23, 105,94,100,12,3,4,45]
-    }]
+    series: [
+        {
+            name: 'Emails Sent',
+            data: [3, 4, 3, 5, 4, 102, 212,43,146,43,165,194,510,152,3,154,23, 105,94,100,12,3,4,45]
+        },{
+            name: 'Files Downloaded',
+            color: '#F26B29',
+            data: [150, 25, 31, 50, 6, 104, 232,430,126,434,16,14,51,185,30,164,231, 115,98,120,112,35,47,25]   
+        }
+]
 });

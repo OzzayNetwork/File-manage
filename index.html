@@ -138,7 +138,18 @@
                                 <li><a href="setup.html">Registration</a></li>
                                 <li><a href="email-group.html">Email Group</a></li>                               
                             </ul>
-                        </li>				
+						</li>		
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="mdi mdi-file-chart-outline" ></i>Reports <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+
+                            <ul>
+                                <li><a href="created_files.html">Files Created</a></li>
+								<li><a href="deleted_files.html">Deleted Files</a></li>      
+								<li><a href="sent_files.html">Sent Files</a></li>
+                                <li><a href="downloads.html">Downloads</a></li>                           
+                            </ul>
+                        </li>	
 						
 						<li class="navigation__active" title="Have a look at some reports"><a href="#"><i class="zmdi zmdi-power" ></i>Logout</a></li>
 						
@@ -198,73 +209,8 @@
 								</ol>
 							</div>
 						</div>
-						<div class="col d-flex justify-content-end">
-							<div>
-								<button class="btn btn-primary" data-toggle="modal" data-target="#electionDate">Election Period</button>
-							</div>
-						</div>
 					</div>
 				</header>
-
-				<!-- Modal -->
-				<div class="modal fade" id="electionDate" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLongTitle">Electioneering Period Setup</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						</div>
-						<div class="modal-body">
-							<h4 class="mb-3">Positions being contested for</h4>
-							<div class="checkboxes-container">
-								<div class="checkbox">
-									<input type="checkbox" class="all-checkboxes" id="customCheck1">
-									<label class="checkbox__label" for="customCheck1">All Positions</label>
-								</div>
-	
-								<div class="checkbox">
-									<input type="checkbox" id="customCheck2">
-									<label class="checkbox__label" for="customCheck2">President</label>
-								</div>
-	
-								<div class="checkbox">
-									<input type="checkbox" id="customCheck3">
-									<label class="checkbox__label" for="customCheck3">Position 2</label>
-								</div>
-	
-								<div class="checkbox">
-									<input type="checkbox" id="customCheck4">
-									<label class="checkbox__label" for="customCheck4">Position 3</label>
-								</div>
-							</div>
-
-							<h4 class="mb-3 mt-4 ">Election Date</h4>
-							<p>Note that the election will be opened and closed on the time and dates you specify. Remember to specify time as well.</p>
-							<div class="row">
-								<div class="col-sm-12 col-md-6">
-									<div class="form-group">
-										<label><strong>Date from</strong></label>
-										<input type="text" class="form-control time-only flatpickr-input" placeholder="Select Date from">
-									</div>
-								</div>
-								<div class="col-sm-12 col-md-6">
-									<div class="form-group">
-										<label><strong>Date from</strong></label>
-										<input type="text" class="form-control datetime-picker flatpickr-input" placeholder="Select Date to">
-									</div>
-								</div>
-							</div>
-
-						</div>
-						<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-						</div>
-					</div>
-					</div>
-				</div>
 
 				<div class="row clearfix">
 					<div class="col-12">
@@ -336,14 +282,15 @@
 				</div>
 
 				<div class="row">
-					<div class="col-lg-3 col-md-6">
+
+					<div class="col-lg-7 col-md-6">
 						<div class="card">
 							<div class="card-header new-header">
 								<div class="row align-items-center">
 									<div class="col">
 									<!-- Title -->
 									<h4 class="card-header-title">
-										Candidates Statistics
+										Email vs Downloads Comparison
 									</h4>
 									</div>
 	
@@ -366,87 +313,7 @@
 								<!-- / .row -->				
 							</div>
 							<div class="card-body px-1 pb-1">
-								<div id="emp-gender" style="height: 230px;">
-
-								</div>
-
-							</div>
-							<div class="card-footer p-3">
-								<div class="row">
-									
-									<div class="col-auto">
-
-										<div class="d-flex justify-content-center align-items-center">
-											<div class="mr-2 text-female">
-												<i class="mdi mdi-face-woman font-36"></i>
-											</div>
-											<div class="">
-												<small>Females</small>
-											<h6 class="m-0 p-0">32 (55%)</h6>
-											</div>
-										</div>
-									</div>
-
-									<div class="col-auto">
-
-										<div class="d-flex justify-content-center align-items-center">
-											<div class="mr-2 text-male">
-												<i class="mdi mdi-face font-36"></i>
-											</div>
-											<div class="">
-												<small>Male</small>
-											<h6 class="m-0 p-0">23 (45%)</h6>
-											</div>
-										</div>
-									</div>
-
-								</div>
-
-							</div>
-						</div>
-						<div class="quick-stats__item bg-primary d-flex align-items-start">
-                            <div class="quick-stats__info ">
-                                <h2>23</h2>
-                                <small class="mb-0 pb-0">New Voters</small>
-                            </div>
-
-                            <div class="text-white font-36">
-								<i class="mdi mdi-account-plus-outline"></i>
-							</div>
-                        </div>
-						
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="card">
-							<div class="card-header new-header">
-								<div class="row align-items-center">
-									<div class="col">
-									<!-- Title -->
-									<h4 class="card-header-title">
-										Voting Rate
-									</h4>
-									</div>
-	
-									<div class="col-auto opacity-0">
-									<!-- Tabs -->
-									<ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-										<li class="nav-item">
-										<a href="#" title="Show all transactions" class="nav-link active allLoans" data-toggle="tab">
-											A
-										</a>
-										</li>
-										<li class="nav-item">
-										<a href="#" title="Show money received" class="nav-link loanBreakdown" data-toggle="tab">
-											L
-										</a>
-										</li>									 
-									</ul>				
-									</div>
-								</div> 
-								<!-- / .row -->				
-							</div>
-							<div class="card-body px-1 pb-1">
-								<div id="voting-rate" style="height: 230px;">
+								<div id="voting-rate" style="height: 275px;">
 
 								</div>
 
@@ -458,11 +325,11 @@
 
 										<div class="d-flex justify-content-center align-items-center">
 											<div class="mr-2 text-info">
-												<i class="mdi mdi-history font-36"></i>
+												<i class="mdi mdi-email-send font-36"></i>
 											</div>
 											<div class="">
-												<small>Votes Casted</small>
-											<h6 class="m-0 p-0">22 Votes (06%)</h6>
+												<small>Emails Sent</small>
+											<h6 class="m-0 p-0">225 Files (22 GB)</h6>
 											</div>
 										</div>
 									</div>
@@ -471,11 +338,11 @@
 
 										<div class="d-flex justify-content-center align-items-center">
 											<div class="mr-2 text-primary">
-												<i class="mdi mdi-account-clock font-36"></i>
+												<i class="mdi mdi-file-download-outline font-36"></i>
 											</div>
 											<div class="">
-												<small>Remaining Votes</small>
-											<h6 class="m-0 p-0">200 Votes (94%)</h6>
+												<small>Files Downloaded</small>
+											<h6 class="m-0 p-0">200 Files (20 GB)</h6>
 											</div>
 										</div>
 									</div>
@@ -501,7 +368,6 @@
 						
 					</div>
 
-
 					<div class="col-lg-5 col-sm-12">
 						<!-- Orders -->
 						<div class="card results-index-card ">
@@ -516,7 +382,7 @@
 
 								<div class="col-auto">
 								<!-- Tabs -->
-								<select class="selectpicker float-right mb-3" data-style="btn-primary">
+								<select class="selectpicker opacity-0 float-right mb-3" data-style="btn-primary">
 									<option>Position 1</option>
 									<option>Position 2</option>
 									<option>Position 3</option>
@@ -534,20 +400,20 @@
 										<div class="candidate-bar">
 											<span class="position-num">1. </span>
 											<div class="candidate-image">
-												<img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
+												<img src="demo/img/file-types/txt.svg" class="listview__img" alt="">
 											</div>
 											<div class="the-bar">
 												<a href="#" class="listview__item">
 													<div class="listview__content">
-														<div class="listview__heading mb-0"><strong>Kelvin Njuguna (200 Votes)</strong> </div>
+														<div class="listview__heading mb-0"><strong>30 Text/Word Files</strong> </div>
 					
 														<div class="widget-ratings__item pt-0">
 														
-															<div class="float-right position-per">20%</div>
+															<div class="float-right position-per">3.84 GB</div>
 							
 															<div class="widget-ratings__progress pl-0">
 																<div class="progress">
-																	<div class="progress-bar bg-primary" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+																	<div class="progress-bar bg-primary" role="progressbar" style="width: 2%;" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100"></div>
 																</div>
 															</div>
 														</div>
@@ -564,11 +430,11 @@
 											<div class="the-bar">
 												<a href="#" class="listview__item">
 													<div class="listview__content">
-														<div class="listview__heading mb-0"><strong>Kelvin Njuguna (200 Votes)</strong> </div>
+														<div class="listview__heading mb-0"><strong>222 Power Point Files </strong> </div>
 					
 														<div class="widget-ratings__item pt-0">
 														
-															<div class="float-right position-per">20%</div>
+															<div class="float-right position-per">22 GB</div>
 							
 															<div class="widget-ratings__progress pl-0">
 																<div class="progress">
@@ -584,20 +450,20 @@
 										<div class="candidate-bar">
 											<span class="position-num">3. </span>
 											<div class="candidate-image">
-												<img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
+												<img src="demo/img/file-types/pdf.svg" class="listview__img" alt="">
 											</div>
 											<div class="the-bar">
 												<a href="#" class="listview__item">
 													<div class="listview__content">
-														<div class="listview__heading mb-0"><strong>Kelvin Njuguna (200 Votes)</strong> </div>
+														<div class="listview__heading mb-0"><strong>300 PDF Files</strong> </div>
 					
 														<div class="widget-ratings__item pt-0">
 														
-															<div class="float-right position-per">20%</div>
+															<div class="float-right position-per">25 GB</div>
 							
 															<div class="widget-ratings__progress pl-0">
 																<div class="progress">
-																	<div class="progress-bar bg-primary" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+																	<div class="progress-bar bg-primary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 																</div>
 															</div>
 														</div>
@@ -609,20 +475,20 @@
 										<div class="candidate-bar">
 											<span class="position-num">4. </span>
 											<div class="candidate-image">
-												<img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
+												<img src="demo/img/file-types/jpeg.svg" class="listview__img" alt="">
 											</div>
 											<div class="the-bar">
 												<a href="#" class="listview__item">
 													<div class="listview__content">
-														<div class="listview__heading mb-0"><strong>Kelvin Njuguna (200 Votes)</strong> </div>
+														<div class="listview__heading mb-0"><strong>489 JPEG Files</strong> </div>
 					
 														<div class="widget-ratings__item pt-0">
 														
-															<div class="float-right position-per">20%</div>
+															<div class="float-right position-per">40 GB</div>
 							
 															<div class="widget-ratings__progress pl-0">
 																<div class="progress">
-																	<div class="progress-bar bg-primary" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+																	<div class="progress-bar bg-primary" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
 																</div>
 															</div>
 														</div>
@@ -634,20 +500,45 @@
 										<div class="candidate-bar">
 											<span class="position-num">5. </span>
 											<div class="candidate-image">
-												<img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
+												<img src="demo/img/file-types/mp4.svg" class="listview__img" alt="">
 											</div>
 											<div class="the-bar">
 												<a href="#" class="listview__item">
 													<div class="listview__content">
-														<div class="listview__heading mb-0"><strong>Kelvin Njuguna (200 Votes)</strong> </div>
+														<div class="listview__heading mb-0"><strong>580 SVG Files</strong> </div>
 					
 														<div class="widget-ratings__item pt-0">
 														
-															<div class="float-right position-per">20%</div>
+															<div class="float-right position-per">48 GB</div>
 							
 															<div class="widget-ratings__progress pl-0">
 																<div class="progress">
-																	<div class="progress-bar bg-primary" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+																	<div class="progress-bar bg-primary" role="progressbar" style="width: 48%;" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+
+										<div class="candidate-bar">
+											<span class="position-num">6. </span>
+											<div class="candidate-image">
+												<img src="demo/img/file-types/gif.svg" class="listview__img" alt="">
+											</div>
+											<div class="the-bar">
+												<a href="#" class="listview__item">
+													<div class="listview__content">
+														<div class="listview__heading mb-0"><strong>580 GIF Files</strong> </div>
+					
+														<div class="widget-ratings__item pt-0">
+														
+															<div class="float-right position-per">48 GB</div>
+							
+															<div class="widget-ratings__progress pl-0">
+																<div class="progress">
+																	<div class="progress-bar bg-primary" role="progressbar" style="width: 48%;" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
 																</div>
 															</div>
 														</div>
@@ -667,39 +558,18 @@
 							<div class="card-footer py-3 px-4">
 								<div class="row d-flex justify-content-between">
 
-									<div class="col-auto">
+									<div class="col-12">
 
-										<div class="d-flex justify-content-center align-items-center">
+										<div class="d-flex justify-content-start align-items-center">
 											<div class="mr-2 text-info">
-												<i class="mdi mdi-history font-36"></i>
+												<i class="mdi mdi-file-document-multiple-outline font-36"></i>
 											</div>
 											<div class="">
-												<small>Votes Casted</small>
-											<h6 class="m-0 p-0">22 Votes (06%)</h6>
+												<small>Total Files</small>
+											<h6 class="m-0 p-0">6666 Files (666 GB)</h6>
 											</div>
 										</div>
-									</div>
-									
-									<div class="col-auto">
-
-										<div class="d-flex justify-content-center align-items-center">
-											<div class="mr-2 text-primary">
-												<i class="mdi mdi-account-clock font-36"></i>
-											</div>
-											<div class="">
-												<small>Remaining Votes</small>
-											<h6 class="m-0 p-0">200 Votes (94%)</h6>
-											</div>
-										</div>
-									</div>
-
-									<div class="col-auto float-right d-flex justify-content-center align-items-center pull-right">
-										<div class="">
-											<button class="btn btn-primary">More <i class="zmdi zmdi-long-arrow-right"></i></button>
-										</div>
-									</div>
-
-									
+									</div>									
 
 								</div>
 
