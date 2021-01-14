@@ -1,6 +1,6 @@
 Highcharts.chart('voting-rate', {
     chart: {
-        type: 'areaspline',
+        type: 'spline',
         zoomType: 'x',
         backgroundColor:'transparent'
     },
