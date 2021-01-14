@@ -16465,7 +16465,7 @@ padding:1.25rem 2.2rem;
 .index-stats-card{
     background-color: yellow; 
     color: #222;
-    clip-path: polygon(0 23%, 0 7%, 4% 0, 29% 0, 32% 7%, 60% 7%, 98% 7%, 100% 10%, 100% 100%, 15% 100%, 0 100%, 0% 85%);
+    clip-path: polygon(0 23%, 0 0%, 4% 0, 28% 0, 32% 7%, 79% 7%, 100% 7%, 100% 15%, 100% 105%, 20% 103%, 0 104%, 0% 80%);
     height: 85%;
 }
 
