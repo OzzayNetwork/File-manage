@@ -130,16 +130,7 @@
                                
                             </ul>
 						</li>  		
-						
-						<li class="navigation__sub">
-                            <a href="#"><i class="icon_cog" ></i>SetUp <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
 
-                            <ul>
-                                <li><a href="setup.html">Registration</a></li>
-                                <li><a href="email-group.html">Email Group</a></li>                               
-                            </ul>
-						</li>		
-						
 						<li class="navigation__sub">
                             <a href="#"><i class="mdi mdi-file-chart-outline" ></i>Reports <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
 
@@ -151,51 +142,21 @@
                             </ul>
                         </li>	
 						
+						<li class="navigation__sub">
+                            <a href="#"><i class="icon_cog" ></i>SetUp <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+
+                            <ul>
+                                <li><a href="setup.html">Registration</a></li>
+                                <li><a href="email-group.html">Email Group</a></li>                               
+                            </ul>
+						</li>		
+						
 						<li class="navigation__active" title="Have a look at some reports"><a href="#"><i class="zmdi zmdi-power" ></i>Logout</a></li>
 						
                     </ul>
                 </div>
             </aside>
 			
-			<div class="content--full map-main-container d-none">
-					<div class="col-12">
-						<header class="content__title px-0 border-0">
-				 	<div class="row">
-						<div class="col-md-6 col-sm-12">
-							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Biller Dashboard</h1>
-							</span>
-							<div class="">
-								<ol class="breadcrumb border-0">
-									<li class="breadcrumb-item">Home</li>
-									<li class="breadcrumb-item active">Dashboard</li>
-								
-								</ol>
-								
-							</div>
-						</div>
-					</div>
-				</header>
-					</div>
-					<div class="pb-4">
-						<div class="col-12">
-							<h4 class="text-white text-light d-none">Revenue Collection By Subcounty</h4>
-							<div id="the-map-container">
-							</div>
-<!--							control buttons-->
-							<div class="row map-buttons d-flex">
-									<span class="map-date p-3 text-white ml-3">30 Jun 2020</span>
-								<div class="col">
-									<button id="today" disabled="true" class="active"><span></span>Today: 7,895,897</button>
-									 <button id="this-week"><span></span>This Week: 15,237,895,897</button>
-									 <button id="this-month"><span></span>June 2020: 21,237,895,897</button>
-									 <button id="financial-year"><span></span>FY 19/20: 452,237,895,897</button>
-								</div>
-							</div>
-<!--							control buttons-->
-						</div>
-					</div>
-			</div>
 			<section class="content light-body">
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
@@ -217,15 +178,16 @@
 						<h2>Important statistics</h2>
 					</div>
 					<div class="col-lg-3 col-md-6">
-						<a href="leave.html" class="card light-card calc-34">
+						<a href="#" class="index-stats-card card">
 							<div class="card-body">
-								<div class="d-flex align-items-center">
-									<div class="icon-in-bg bg-warning text-white rounded-circle" style="font-size: 12px;">
-										<span class=""><i class="mdi mdi-account-arrow-right font-30"></i></span>
+								<span class="index-stats-text">Clients</span>
+								<div class="d-flex align-content-center mt-3">
+									<div class="icon-in-bg bg-warning text-white rounded-circle mb-2" style="font-size: 12px;">
+										<span class=""><i class="mdi mdi-account font-30"></i></span>
 									</div>
-									<div class="ml-4">
-										<span class="font-12">Clients <strong class="today-full d-none"></strong></span>
-										<h4 class="mt-1 mb-0 font-weight-medium">222 GB (2221 Files) </h4>
+									<div class="ml-2">
+										<h4 class="mt-1 mb-0 font-weight-medium">222 GB</h4>
+										<h4 class="mt-1 mb-0 font-weight-medium">(2221 Files) </h4>
 									</div>
 								</div>
 							</div>
@@ -233,30 +195,32 @@
 					</div>
 					
 					<div class="col-lg-3 col-md-6">
-						<a href="#" class="card calc-34">
+						<a href="#" class="index-stats-card card">
 							<div class="card-body">
-								<div class="d-flex align-items-center">
+								<span class="index-stats-text">Staff</span>
+								<div class="d-flex align-content-center mt-3">
 									<div class="icon-in-bg text-white rounded-circle bg-danger text-uppercase">
-										<span class=""><i class="mdi mdi-cash-remove"></i></span>
+										<span class=""><i class="mdi mdi-account-multiple"></i></span>
 									</div>
-									<div class="ml-4">
-										<span class="font-12">Staff</span>
-										<h4 class="mt-1 mb-0 font-weight-medium">222 GB(2221 Files)</h4>
+									<div class="ml-2">
+										<h4 class="mt-1 mb-0 font-weight-medium">222 GB</h4>
+										<h4 class="mt-1 mb-0 font-weight-medium">(2221 Files) </h4>
 									</div>
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="col-lg-3 col-md-6">
-						<a href="departments.html" class="card calc-34">
+						<a href="#" class="index-stats-card card">
 							<div class="card-body">
-								<div class="d-flex align-items-center">
+								<span class="index-stats-text">Company</span>
+								<div class="d-flex align-content-center mt-3">
 									<div class="icon-in-bg bg-orange text-white rounded-circle">
-										<span class=""><i class="font-30 mdi mdi-folder-account"></i></span>
+										<span class=""><i class="font-30 mdi mdi-account-box-multiple"></i></span>
 									</div>
-									<div class="ml-4">
-										<span class="font-12">Company</span>
-										<h4 class="mt-1 mb-0 font-weight-medium">222 GB (2221 Files) </h4>
+									<div class="ml-2">
+										<h4 class="mt-1 mb-0 font-weight-medium">222 GB</h4>
+										<h4 class="mt-1 mb-0 font-weight-medium">(2221 Files) </h4>
 									</div>
 								</div>
 							</div>
@@ -264,16 +228,16 @@
 					</div>
 
 					<div class="col-lg-3 col-md-6">
-						<a class="card calc-34" href="#!">
+						<a class="index-stats-card card" href="#">
 							<div class="card-body bg-primary">
-								<div class="d-flex align-items-center">
-									<div class="icon-in-bg text-white rounded-circle bg-orange text-uppercase d-none">
-										<span class=""><i><img src="demo/img/icons/week.svg"></i></span>
+								<span class="index-stats-text ml-2 text-white-50">Total</span>
+								<div class="d-flex align-content-center mt-3">
+									<div class="icon-in-bg text-white rounded-circle bg-orange text-uppercase">
+										<span class=""><i class="mdi mdi-folder-multiple"></i></span>
 									</div>
-									<div class="w-100">
-										<span class="font-12 text-white-50">Total<strong class="week-full d-none"></strong></span>
-										<h4 class="mt-1 mb-0 font-weight-medium text-white">666 GB(6663 Files)</h4>
-
+									<div class="ml-2">
+										<h4 class="mt-1 mb-0 font-weight-medium text-white">666 GB</h4>
+										<h4 class="mt-1 mb-0 font-weight-medium text-white">(6663 Files) </h4>
 									</div>
 								</div>
 							</div>

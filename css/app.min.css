@@ -16461,3 +16461,24 @@ padding:1.25rem 2.2rem;
     margin: 0 1.2rem 0 0;
     border: 0px !important;
 }
+
+.index-stats-card{
+    background-color: yellow; 
+    color: #222;
+    clip-path: polygon(0 23%, 0 7%, 4% 0, 29% 0, 32% 7%, 60% 7%, 98% 7%, 100% 10%, 100% 100%, 15% 100%, 0 100%, 0% 85%);
+    height: 85%;
+}
+
+.index-stats-card .card-body {
+    padding-top: 2.2rem;
+    padding-right: 2.2rem;
+    padding-bottom: 1.2rem;
+    padding-left: 1rem;
+}
+
+.index-stats-text {
+    position: absolute;
+    top: 2px;
+    left: 11px;
+    font-size: 13px;
+}
