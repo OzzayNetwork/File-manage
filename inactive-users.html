@@ -175,18 +175,18 @@
             </aside>
            
             <!-- Main Body -->
-			 <section class="content">
+            <section class="content">
                 <header class="content__title px-0 border-0">
 				 	<div class="row" >
 						<div class="col-md-5 col-sm-12">
 							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Change Password</h1>
+							 <h1 class="text-capitalize stream_name m-0">Inactive Users</h1>
 							</span>
 							<div class="">
 								<ol class="breadcrumb border-0">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item"><a href="index.html">My Account</a></li>
-									<li class="breadcrumb-item active">Change password</li>
+									<li class="breadcrumb-item"><a href="index.html">User Accounts</a></li>
+									<li class="breadcrumb-item active">Inactive Users</li>
 								
 								</ol>
 								
@@ -197,77 +197,130 @@
                 
 
 				    <div class="row with-custom-header">	
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                            <div class="account-info h-100">
-                                <div class="card delegate-card" style="height: calc(100% - 33px); ">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Password change</h4>
-                                        <h6 class="card-subtitle">Fill in the form, the fields with a <strong class="text-danger">*</strong> are mandatory fields</h6>
-                                        <hr>
-                                        <div class="form-img">
-                                            <img class="img" src="demo/img/form-svgs/pass.svg" style="height: 331px;">
-                                        </div>
-                                        
-                                        <div class="notes d-none">
-                                            <p>
-                                            
-                                        </p>
-                                        </div>
+                        <div class="col-12 p-0">
+                            <div class="card ">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-striped spacing8" id="data-table">
+                                            <thead class="">
+                                                <tr> 
+                                                    <th></th>
+                                                    <th>User's name</th>
+                                                    <th>Date created</th>
+                                                    <th>Date blocked</th>
+                                                    <th>Reason for being blocked</th>
+                                                    <th>Blocked by</th>
+                                                    <th>Actions</th>
+    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="w60">
+    
+                                                        <a title=""><div class="avatar-char">SO</div></a>
+                                                    </td>
+                                                    <td class="the_user">
+                                                        <p class="mb-0"><a><strong>Scott Ortega</strong></a></p>
+                                                        <a href="tel:070235689" title="">070235689</a>
+                                                    </td>
+                                                    <td>
+                                                        <span>22 May 2020 10:02</span>
+                                                    </td>
+                                                    <td><span>25 Jul 2019 12:56</span></td>
+                                                    <td>Some really funny reason</td>
+                                                    <td>Ms Mafuko</td>
+                                                    <td>
+                                                        <button class="btn btn-success btn--icon-text ml-2 deactivate-user" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-user"><i class="zmdi zmdi-check-all"></i> Reactivate Account</button>													
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="w60">
+    
+                                                        <a title=""><div class="avatar-char">SO</div></a>
+                                                    </td>
+                                                    <td class="the_user">
+                                                        <p class="mb-0"><a><strong>Scott Ortega</strong></a></p>
+                                                        <a href="tel:070235689" title="">070235689</a>
+                                                    </td>
+                                                    <td>
+                                                        <span>22 May 2020 10:02</span>
+                                                    </td>
+                                                    <td><span>25 Jul 2019 12:56</span></td>
+                                                    <td>Some really funny reason</td>
+                                                    <td>Ms Mafuko</td>
+                                                    <td>
+                                                        <button class="btn btn-success btn--icon-text ml-2 deactivate-user" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-user"><i class="zmdi zmdi-check-all"></i> Reactivate Account</button>													
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="w60">
+    
+                                                        <a title=""><div class="avatar-char">SO</div></a>
+                                                    </td>
+                                                    <td class="the_user">
+                                                        <p class="mb-0"><a><strong>Scott Ortega</strong></a></p>
+                                                        <a href="tel:070235689" title="">070235689</a>
+                                                    </td>
+                                                    <td>
+                                                        <span>22 May 2020 10:02</span>
+                                                    </td>
+                                                    <td><span>25 Jul 2019 12:56</span></td>
+                                                    <td>Some really funny reason</td>
+                                                    <td>Ms Mafuko</td>
+                                                    <td>
+                                                        <button class="btn btn-success btn--icon-text ml-2 deactivate-user" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-user"><i class="zmdi zmdi-check-all"></i> Reactivate Account</button>													
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="w60">
+    
+                                                        <a title=""><div class="avatar-char">SO</div></a>
+                                                    </td>
+                                                    <td class="the_user">
+                                                        <p class="mb-0"><a><strong>Scott Ortega</strong></a></p>
+                                                        <a href="tel:070235689" title="">070235689</a>
+                                                    </td>
+                                                    <td>
+                                                        <span>22 May 2020 10:02</span>
+                                                    </td>
+                                                    <td><span>25 Jul 2019 12:56</span></td>
+                                                    <td>Some really funny reason</td>
+                                                    <td>Ms Mafuko</td>
+                                                    <td>
+                                                        <button class="btn btn-success btn--icon-text ml-2 deactivate-user" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-user"><i class="zmdi zmdi-check-all"></i> Reactivate Account</button>													
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="w60">
+    
+                                                        <a title=""><div class="avatar-char">SO</div></a>
+                                                    </td>
+                                                    <td class="the_user">
+                                                        <p class="mb-0"><a><strong>Scott Ortega</strong></a></p>
+                                                        <a href="tel:070235689" title="">070235689</a>
+                                                    </td>
+                                                    <td>
+                                                        <span>22 May 2020 10:02</span>
+                                                    </td>
+                                                    <td><span>25 Jul 2019 12:56</span></td>
+                                                    <td>Some really funny reason</td>
+                                                    <td>Ms Mafuko</td>
+                                                    <td>
+                                                        <button class="btn btn-success btn--icon-text ml-2 deactivate-user" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-user"><i class="zmdi zmdi-check-all"></i> Reactivate Account</button>													
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                            
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                            <div class=create-form>
-                                <div class="col-12 p-0">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Account password changing form</h4>
-                                            <h6 class="card-subtitle">Use the form below to change your password</h6>
-                                            <hr>
-                                            <div class="row clearfix">
-                                                
-                                                <div class="col-lg-12 col-md-12">
-                                                    <div class="form-group"> 
-                                                        <label>Current password<strong class="text-danger">*</strong></label>
-                                                        <p><small>Enter your current password</small></p>
-                                                        <input type="password" class="form-control" placeholder="Enter your current password">
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="form-group"> 
-                                                        <label>New Password<strong class="text-danger">*</strong></label>
-                                                        <p><small>Enter your new password</small></p>
-                                                        <input type="password" class="form-control" placeholder="New password">
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="form-group">
-                                                        <label>Confirm New Password<strong class="text-danger">*</strong></label>
-                                                        <p><small>Confirm your new password</small></p>
-                                                        <input type="password" class="form-control" placeholder="Confirm password">
-                                                    </div>
-                                                </div>
-
-                                                
-                                                
-                                                <div class="col-12">
-                                                    <button class="btn btn-primary my-4">Change Password</button>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>					
                         </div>
                     </div>
 				</div>
 			
                 <footer class="footer hidden-xs-down">
-                    <p>Powered by</p>
-					<center><a class="nouveta-logoo" href="https://nouveta.tech/"><img src="demo/img/logo-files/logo2.png" target="new"></center></a></center>
+                    <p>Powered by RevenueSure</p>
                 </footer>
             </section>
         </main>
