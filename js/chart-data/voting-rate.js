@@ -21,30 +21,18 @@ Highcharts.chart('voting-rate', {
     },
     xAxis: {
         categories: [
-            '12AM',
-            '1AM',
-            '2AM',
-            '3AM',
-            '4AM',
-            '4am',
-            '6AM',
-            '7AM',
-            '8AM',
-            '9AM',
-            '10AM',
-            '11M',
-            '12PM',
-            '1PM',
-            '2PM',
-            '3PM',
-            '4PM',
-            '5PM',
-            '6PM',
-            '7PM',
-            '8PM',
-            '9PM',
-            '10PM',
-            '11PM',
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'June',
+            'July',
+            'Aug',
+            'Sept',
+            'Oct',
+            'Nov',
+            'Dec'
             
         ],
         plotBands: [{ // visualize the weekend
@@ -91,11 +79,11 @@ Highcharts.chart('voting-rate', {
     series: [
         {
             name: 'Emails Sent',
-            data: [3, 4, 3, 5, 4, 102, 212,43,146,43,165,194,510,152,3,154,23, 105,94,100,12,3,4,45]
+            data: [3, 4, 3, 5, 4, 102, 212,43,146,43,165,194]
         },{
             name: 'Files Downloaded',
             color: '#F26B29',
-            data: [150, 25, 31, 50, 6, 104, 232,430,126,434,16,14,51,185,30,164,231, 115,98,120,112,35,47,25]   
+            data: [150, 25, 31, 50, 6, 104, 232,430,126,434,16,14]   
         }
 ]
 });
