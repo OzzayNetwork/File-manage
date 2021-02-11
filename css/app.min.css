@@ -16482,3 +16482,55 @@ padding:1.25rem 2.2rem;
     left: 11px;
     font-size: 13px;
 }
+
+
+.login-img-container img{
+    height: 300px;
+   }
+   
+   .login-img-container{
+       display: flex;
+       justify-content: flex-start;
+       align-items: center;
+   }
+   
+   .btn-login{
+       display: block;
+       width: 100%;
+       height: calc(3.25rem + 2px);
+       padding: .375rem .2rem;
+       font-size: 1rem;
+       line-height: 1.5;
+       color: white;
+       background-clip: padding-box;
+       border-radius: 0;
+       transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+   }
+   
+   .login-form-header{
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+       margin-bottom: 40px;
+   }
+   
+   .login-content{
+       height: 100vh;
+       background: white;
+       display: flex;
+       padding: 4rem;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+   }
+   
+   .login-form{
+       padding: 6rem 5rem !important;
+       border: 1px solid #80808052;
+       border-radius: 7px;
+   }
+   
+   .the-login-logo{
+       height: 50px;
+       margin-bottom: 20px;
+   }
